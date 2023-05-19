@@ -1,0 +1,7 @@
+E2E Testing Part 6: SAP Analytics Cloud / SAP Lumira
+https://blogs.sap.com/2021/01/08/part-6-e2e-testing-of-sap-analytics-cloud-sap-lumira/
+
+Testing Env: cypress
+
+SAC Story URL:
+https://atos-information.eu10.hanacloudservices.cloud.sap/sap/fpa/ui/tenants/45a5b/app.html#/story2&/s2/73C9A8872316A29B4C3582ECA8F6C831/?url_api=true&preview=true&mode=view&view_id=story2
