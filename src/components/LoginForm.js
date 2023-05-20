@@ -6,7 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
-// import { runCypressTest } from "../../cypress/e2e/spec.cy";
+//import shell from "shelljs";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,18 +42,16 @@ const ResultArea = ({ result }) => {
   );
 };
 
-const runCypressTest = (username, password, url) => {
-  // cy.visit(url);
-  // cy.get("#username").type(username);
-  // cy.get("#password").type(password);
-  // cy.get("#login-button").click();
+const runTestCafeTest = async (username, password, url) => {
+  //shell.exec("ls");
+  return "Hello";
 };
 
 const LoginForm = () => {
   const classes = useStyles();
 
   const [username, setUsername] = useState("dimitri.rybak@atos.net");
-  const [password, setPassword] = useState("P2}4)+~;NNN!");
+  const [password, setPassword] = useState("****");
   const [result, setResult] = useState("");
   const [url, setUrl] = useState(
     "https://atos-information.eu10.hanacloudservices.cloud.sap/sap/fpa/ui/tenants/45a5b/app.html#/story2&/s2/73C9A8872316A29B4C3582ECA8F6C831/?url_api=true&preview=true&mode=view&view_id=story2"
@@ -75,7 +73,7 @@ const LoginForm = () => {
     event.preventDefault();
     // Perform login logic here
     setResult("Hello Dimitri");
-    runCypressTest(username, password, url); // Execute Cypress test
+    setResult(runTestCafeTest(username, password, url)); // Execute TestCafe test
     // Reset the form
     // setUsername("");
     // setPassword("");
